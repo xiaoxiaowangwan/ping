@@ -1,28 +1,54 @@
 <template>
   <view class="page">
     <view class="content">
-      <view class="example-body">
-        <button class="button" type="button">中间弹出 popup</button>
+      <view class="content_item">
+        <button class="button" type="button" @click="togglePopup('center', 'popup')">中间弹出</button>
       </view>
       <!-- <image src="../../static/icon/fudai.png"></image>  -->
     </view>
-    <PopUp></PopUp>
+    <PopUp ref="popup" :type="type" @change="change">
+        <DiyDiv :content="content">
+            ...
+        </DiyDiv>
+    </PopUp>
   </view>
 </template>
 
 <script>
 import PopUp from "../../components/popup/popup";
+import DiyDiv from "../../components/diyDiv/diyDiv";
 export default {
   name: "category",
   data() {
     return {
-      title: "Hello"
+      type: "", // 弹出类型
+      show: false, // 是否显示
+      content: "" // slot弹出内容
     };
   },
   onLoad() {},
-  methods: {},
+  methods: {
+    togglePopup(type, open) {
+      switch (type) {
+        case "top":
+          this.content = "顶部弹出 popup";
+          break;
+        case "bottom":
+          this.content = "底部弹出 popup";
+          break;
+        case "center":
+          this.content = "居中弹出 popup";
+          break;
+      }
+      this.type = type;
+      this.$refs[open].open();
+    },
+    change(e) {
+      console.log(e.show);
+    }
+  },
   components: {
-    PopUp
+    PopUp,DiyDiv
   }
 };
 </script>
@@ -35,10 +61,8 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    .example-body {
-    //   border-top: 1vw #f5f5f5 solid;
+    .content_item {
       padding: 60vw;
-    //   background: #fff;
     }
     > image {
       width: 80vw;
