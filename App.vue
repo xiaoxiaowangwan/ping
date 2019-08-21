@@ -13,5 +13,7 @@
 </script>
 
 <style>
+@import './static/css/common.less';
 	/*每个页面公共css */
+	
 </style>
