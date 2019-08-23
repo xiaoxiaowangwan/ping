@@ -25,25 +25,14 @@
     </view>
     <view class="main">
       <view class="vip">
-        <view class="xian"></view>
+        <view>————</view>
         <view class="zi">开通界仕VIP 享专属特权</view>
-        <image class="bx" src="/tea-test/static/img/路径 17.png" />
+        <view>————</view>
       </view>
       <view class="tu">
-        <view class="pic1">
-          <image src="http://wine-static.yibaicdn.com/de3e0700-c314-11e9-86ad-7336f9e363c2.png" />
-        </view>
-        <view class="pic1">
-          <image src="http://wine-static.yibaicdn.com/de3e0700-c314-11e9-86ad-7336f9e363c2.png" />
-        </view>
-        <view class="pic1">
-          <image src="http://wine-static.yibaicdn.com/de3e0700-c314-11e9-86ad-7336f9e363c2.png" />
-        </view>
-        <view class="pic1">
-          <image src="http://wine-static.yibaicdn.com/de3e0700-c314-11e9-86ad-7336f9e363c2.png" />
-        </view>
-        <view class="pic1">
-          <image src="http://wine-static.yibaicdn.com/de3e0700-c314-11e9-86ad-7336f9e363c2.png" />
+        <view class="t-item" v-for="(item, index) in 5" :key="index">
+          <image class="img" src="http://wine-static.yibaicdn.com/de3e0700-c314-11e9-86ad-7336f9e363c2.png" />
+          <text class="text">x3123123123ka</text>
         </view>
       </view>
     </view>
@@ -165,55 +154,54 @@ export default {
     }
   }
 
-  // 第二部分
+  // detail
   .main {
     width: 92vw;
     height: 67vw;
-    background-color: #fff;
+    background-color: red;
     position: absolute;
     bottom: 37vw;
     border-radius: 1vw;
 
     .vip {
-      width: 68vw;
-      height: 23vw;
+      height: 10vw;
       display: flex;
-      .xian {
-        width: 11vw;
-        height: 0vw;
-        border: 0vw solid;
-      }
+      align-items: center;
+      justify-content: center;
+      background-color: orange;
       .zi {
         width: 46vw;
         height: 6vw;
         font-size: 4vw;
       }
-      .bx {
-        width: 11vw;
-        height: 1vw;
-      }
     }
     .tu {
-      width: 87vw;
+      background-color: aqua;
+      width: 100%;
       height: 57vw;
       // border: 1px solid red;
       display: flex;
       flex-wrap: wrap;
-      padding-left: 5vw;
-      position: absolute;
-      bottom: -3vw;
-      margin-left: 6vw;
-      .pic1 {
-        margin-right: 10vw;
-        width: 14vw;
-        height: 14vw;
+      padding: 5vw;
+      box-sizing: border-box;
 
-        image {
+      .t-item {
+        width: 14vw;
+        height: 18vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 20vw;
+        .img {
           width: 14vw;
           height: 14vw;
+          background-color: red;
+        }
+        .text {
+          font-size: 3vw;
         }
       }
-      .pic1:nth-child(3n) {
+      .t-item:nth-child(3n) {
         margin-right: 0vw;
       }
     }

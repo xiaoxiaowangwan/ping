@@ -7,9 +7,9 @@
       <!-- <image src="../../static/icon/fudai.png"></image>  -->
     </view>
     <PopUp ref="popup" :type="type" @change="change">
-        <DiyDiv :content="content">
-            ...
-        </DiyDiv>
+      <DiyDiv :content="content">
+        ...
+      </DiyDiv>
     </PopUp>
   </view>
 </template>
@@ -48,7 +48,8 @@ export default {
     }
   },
   components: {
-    PopUp,DiyDiv
+    PopUp,
+    DiyDiv
   }
 };
 </script>
