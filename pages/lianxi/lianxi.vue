@@ -1,136 +1,144 @@
 <template>
   <view class="content">
     <view class="header">
-      <view class="top">
-        <view class="tleft">
-          <view class="pic"></view>
-        </view>
-        <view class="center">
-          <view class="shang">
-            <view class="big">马云</view>
-            <view class="small">2019/8/22</view>
-          </view>
-          <view class="xia">李律师很好，很专业</view>
+      <view class="liwu">
+        <image src="/tea-test/static/img/礼物 活动@2x.png" />
+        <view class="pre">已选礼物</view>
+      </view>
+      <view class="zx">
+        <view class="img"></view>
+        <view class="wenzi">
+          <view>莫高红酒2支装长相守冰红冰白葡萄酒</view>
+          <view>冰酒白葡萄酒500ml*2送香槟杯</view>
         </view>
       </view>
-      <div class="comment">
-        <view class="xia">
-          <view class="tu"></view>
-          <view class="wen">
-            <text>李律师</text>
-          </view>
-        </view>
-      </div>
     </view>
-    <view class="header">
-      <view class="top">
-        <view class="tleft">
-          <view class="pic"></view>
-        </view>
-        <view class="center">
-          <view class="shang">
-            <view class="big">马云</view>
-            <view class="small">2019/8/22</view>
-          </view>
-          <view class="xia">李律师很好，很专业</view>
-        </view>
+    <view class="main">
+      <view class="xie">
+        <image src="/tea-test/static/img/编辑@2x.png" />
+        <view class="zhufu">写点祝福</view>
       </view>
-      <div class="comment">
-        <view class="xia">
-          <view class="tu"></view>
-          <view class="wen">
-            <text>李律师</text>
-          </view>
-        </view>
-      </div>
+      <view class="txt">
+        <textarea placeholder="小小心意，愿你欢喜~" class="wenben" v-model="form.hello"></textarea>
+      </view>
     </view>
+    <button class="footer" @click="goto">
+      <text>赠送好友</text>
+    </button>
   </view>
 </template>
 <style lang="less" scoped>
 .content {
   width: 100vw;
-  height: 180vw;
+  height: 161vw;
   display: flex;
   flex-direction: column;
+  background-color: #ececec;
   .header {
     width: 100vw;
-    height: 40vw;
-    background-color: pink;
-    margin-top: 10vw;
-    .top {
-      width: 100vw;
-      height: 20vw;
-      background-color: skyblue;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      .tleft {
-        width: 20vw;
-        height: 20vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    height: 67vw;
+    background-color: #fff;
 
-        .pic {
-          width: 15vw;
-          height: 15vw;
-          border-radius: 7.5vw;
-          background-color: red;
-        }
+    .liwu {
+      width: 100vw;
+      height: 10vw;
+      display: flex;
+      padding-left: 4vw;
+      padding-top: 4vw;
+      image {
+        width: 6vw;
+        height: 6vw;
       }
-      .center {
-        width: 80vw;
-        font-size: 5vw;
-        display: flex;
-        // flex-direction: row;
-        // justify-content: center;
-        // width: 80vw;
-        // justify-content: flex-start;
-        flex-direction: column;
-        margin-right: 34vw;
-        .shang {
-          display: flex;
-          justify-content: space-between;
-          color: #fff;
-          margin-top: 2vw;
-          .small {
-            font-size: 3vw;
-            margin-right: 6vw;
-          }
-        }
+      .pre {
+        font-size: 4vw;
+        color: #333333;
+        margin-left: 2vw;
+        font-family: PingFangSC;
+        font-weight: 500;
       }
     }
-    .comment {
+    .zx {
       width: 100vw;
-      height: 20vw;
-      background-color: yellow;
+      height: 57vw;
       display: flex;
-      justify-content: flex-end;
+      flex-direction: column;
       align-items: center;
-      .xia {
-        width: 70vw;
-        height: 15vw;
-        background-color: #fff;
-        margin-right: 4vw;
+      .img {
+        width: 35vw;
+        height: 35vw;
+        background-color: blue;
+      }
+      .wenzi {
+        margin-top: 3vw;
         display: flex;
-        .tu {
-          width: 15vw;
-          height: 15vw;
-          border-radius: 7.5vw;
-          background-color: pink;
-        }
-        .wen {
-          margin-top: 2vw;
-          margin-left: 2vw;
-        }
+        flex-direction: column;
+        align-items: center;
+        font-size: 4vw;
+        font-family: PingFangSC;
+        font-weight: 400;
       }
     }
   }
   .main {
     width: 100vw;
-    height: 40vw;
-    background-color: skyblue;
-    margin-top: 10vw;
+    height: 67vw;
+    background-color: #fff;
+    margin-top: 3vw;
+    .xie {
+      width: 100vw;
+      height: 10vw;
+      display: flex;
+      padding-left: 4vw;
+      padding-top: 4vw;
+      image {
+        width: 6vw;
+        height: 6vw;
+      }
+      .zhufu {
+        font-size: 4vw;
+        color: #333333;
+        margin-left: 2vw;
+        font-family: PingFangSC;
+        font-weight: 500;
+      }
+    }
+    .txt {
+      width: 75vw;
+      height: 38vw;
+      background-color: #fff;
+      margin: auto;
+      border: 1px solid #ececec;
+      .wenben {
+        padding-top: 3vw;
+        padding-left: 3vw;
+      }
+    }
+  }
+  .footer {
+    width: 75vw;
+    height: 12vw;
+    background-color: #d7322b;
+    margin: 8vw auto;
+    font-size: 4vw;
+    color: #fff;
+    text-align: center;
+    line-height: 12vw;
   }
 }
 </style>
+<script>
+export default {
+  data() {
+    return {
+      form: {
+        hello: "小小心意，愿你欢喜~"
+      }
+    };
+  },
+  methods: {
+    goto() {
+      this.$router.push("/pages/lushi/lushi.vue");
+    }
+  }
+};
+</script>

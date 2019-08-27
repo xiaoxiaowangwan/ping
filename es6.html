@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   function log(x, y = 'World') {
+      //     console.log(x, y)
+      //   }
+      //   console.log('hello')
+      //   console.log('hello', 'China')
+      //   console.log('hello', '')
+      //   function Point(x = 0, y = 0) {
+      //     this.x = x
+      //     this.y = y
+      //   }
+      //   const p = new Point()
+      //   console.log(x, y)
+      //   let x = 99
+      //   function foo(p = x + 1) {
+      //     console.log(p)
+      //   }
+      //   console.log(foo())
+      //   x = 100
+      //   console.log(foo())
+      //   function foo({ x, y = 5 }) {
+      //     console.log(x, y)
+      //   }
+      //   console.log(foo({}))
+      //   console.log(foo({ x: 1 }))
+      //   console.log(foo({ x: 1 }, { y: 2 }))
+      //   console.log(foo())
+      //   function foo({ x, y = 5 } = {}) {
+      //     console.log(x, y)
+      //   }
+
+      //   foo()
+      function fetch(url, { body = '', method = 'GET', headers = {} }) {
+        console.log(method)
+      }
+
+      fetch('http://example.com', {})
+      // "GET"
+
+      fetch('http://example.com')
+    </script>
+  </body>
+</html>

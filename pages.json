@@ -21,13 +21,109 @@
     {
       "path": "pages/lianxi/lianxi",
       "style": {
-        "navigationBarTitleText": "我的评价"
+        "navigationBarTitleText": "写祝福"
       }
     },
     {
-      "path": "pages/weituo/weituo",
+      "path": "pages/zhuye/zhuye",
       "style": {
-        "navigationBarTitleText": "购买界仕会员"
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "pages/lushi/lushi",
+      "style": {
+        "navigationBarTitleText": "我的委托"
+      }
+    },
+    {
+      "path": "pages/erweima/erweima",
+      "style": {
+        "navigationBarTitleText": "我的二维码"
+      }
+    },
+    {
+      "path": "pages/pay/pay",
+      "style": {
+        "navigationBarTitleText": "支付收银台"
+      }
+    },
+    {
+      "path": "pages/huiyuan/huiyuan",
+      "style": {
+        "navigationBarTitleText": "会员"
+      }
+    },
+    {
+      "path": "pages/toutong/toutong",
+      "style": {
+        "navigationBarTitleText": "头痛"
+      }
+    },
+    {
+      "path": "pages/xiangqing/xiangqing",
+      "style": {
+        "navigationBarTitleText": "详情",
+        "app-plus": {
+          "titleNView": {
+            "buttons": [
+              {
+                "text": "消息",
+                "fontSize": "24px",
+                "float": "left"
+              },
+              {
+                "text": "\ue6c3",
+                "fontSrc": "/static/plus.ttf",
+                "fontSize": "16px",
+                "color": "#9898A2",
+                "float": "right",
+                "width": "30px"
+              },
+              {
+                "text": "\ue630",
+                "fontSrc": "/static/char.ttf",
+                "fontSize": "16px",
+                "color": "#9898A2",
+                "float": "right",
+                "width": "30px"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "path": "pages/zhouyi/zhouyi",
+      "style": {
+        "navigationBarTitleText": "",
+        "app-plus": {
+          "titleNView": {
+            "buttons": [
+              {
+                "text": "消息",
+                "fontSize": "24px",
+                "float": "left"
+              },
+              {
+                "text": "\ue6c3",
+                "fontSrc": "/static/plus.ttf",
+                "fontSize": "16px",
+                "color": "#9898A2",
+                "float": "right",
+                "width": "30px"
+              },
+              {
+                "text": "\ue630",
+                "fontSrc": "/static/char.ttf",
+                "fontSize": "16px",
+                "color": "#9898A2",
+                "float": "right",
+                "width": "30px"
+              }
+            ]
+          }
+        }
       }
     }
   ],
