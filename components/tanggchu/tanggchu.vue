@@ -18,7 +18,7 @@ export default {};
   border: 1px dashed #000;
   .main {
     background-image: url("/static/img/bgc.png");
-    background-size: 38vw 58vw;
+    background-size: 38vw 58 w;
   }
 }
 </style>
