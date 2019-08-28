@@ -3,7 +3,7 @@
     <slot />
     <view class="main">
       <view>
-        <image />
+        <image src="###" />
       </view>
     </view>
   </view>
